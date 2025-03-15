@@ -2,7 +2,7 @@
 
 int main(){
 
-int torre, rainha = 1, bispo = 1;
+int torre, rainha = 1, bispo = 1, cavalo;
 
 //Loop utilizado - For.
     printf("Torre - Movimento:\n\n");
@@ -11,6 +11,8 @@ int torre, rainha = 1, bispo = 1;
     {
         printf("Direita\n");
     }
+
+    printf("\n");
 
 //Loop utilizado - While.
     
@@ -22,6 +24,8 @@ int torre, rainha = 1, bispo = 1;
 
         bispo++;
     }
+
+    printf("\n");
 
 //Loop utilizado - Do While.
     
@@ -35,7 +39,24 @@ int torre, rainha = 1, bispo = 1;
 
     } while (rainha <= 8);
     
+    printf("\n");
+
+//Loop aninhado utilizado - For (While).
+
+    printf("Cavalo - Movimento:\n\n");
+
+    for (cavalo = 1; cavalo <= 1; cavalo++)
+    {
+        while (cavalo <= 2)
+        {
+            printf("Baixo\n");
+            cavalo++;
+        }
+        printf("Esquerda\n");
+    }
+    
+    printf("\n");
 
     return 0;
-    
+
 }
