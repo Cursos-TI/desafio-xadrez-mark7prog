@@ -1,43 +1,59 @@
 #include <stdio.h>
 
+//Utilizando recurso Recursivo para simplificar o código.
+
+void rtorre(int nt){
+
+    if (nt > 0)
+    {
+    
+    printf("Direita\n");
+    rtorre(nt - 1);
+}
+}
+
+void rrainha(int nr){
+
+    if(nr > 0){
+
+    printf("Esquerda\n");
+    rrainha(nr - 1);
+}
+} 
+
 int main(){
 
-int torre, rainha = 1, bispo = 1, cavalo;
+int torre, rainha, bispo = 1, cavalo;
 
-//Loop utilizado - For.
+//Loop recursivo - Torre.
     printf("Torre - Movimento:\n\n");
+    torre = 5;
+    rtorre(torre);
 
-    for (torre = 1; torre <= 5; torre++)
+    printf("\n");
+
+//Loop aninhado utilizado - For(While).
+    
+    printf("Bispo - Movimento:\n\n");
+
+    for (bispo = 0; bispo < 5; bispo++)
     {
+        while (bispo < 5)
+        {
+            printf("Cima\t");
+            break;
+        }
         printf("Direita\n");
     }
 
     printf("\n");
 
-//Loop utilizado - While.
-    
-    printf("Bispo - Movimento:\n\n");
-
-    while (bispo <= 5)
-    {
-        printf("Cima/Direita\n");
-
-        bispo++;
-    }
-
-    printf("\n");
-
-//Loop utilizado - Do While.
+//Loop Recursivo - Rainha.
     
     printf("Rainha - Movimento:\n\n");
 
-    do
-    {
-        printf("Esquerda\n");
-
-        rainha++;
-
-    } while (rainha <= 8);
+    rainha = 8;
+    rrainha(rainha);
     
     printf("\n");
 
@@ -49,12 +65,13 @@ int torre, rainha = 1, bispo = 1, cavalo;
     {
         while (cavalo <= 2)
         {
-            printf("Baixo\n");
+            printf("Cima\n");
             cavalo++;
         }
-        printf("Esquerda\n");
+        printf("Direita\n");
     }
-    
+
+
     printf("\n");
 
     return 0;
